@@ -18,9 +18,10 @@ spec:
         app: springboot-configmap-k8s
         version: v0.0.1
     spec:
+      serviceAccountName: "config-reader"
       containers:
         - name: springboot-configmap-k8s
-          image: saaddico/springboot-k8s-configmap:v3
+          image: ravihari/springbootk8scm:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
